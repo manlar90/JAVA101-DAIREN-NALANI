@@ -1,21 +1,23 @@
-MIT License
+package daireAlaniHesaplama;
+import java.util.Scanner;
+public class daireAlaniHesaplama {
+    public static void main(String [] args){
+        int r,a;
+        double pi=3.14;
 
-Copyright (c) 2023 MEHMET ALİ ANLAR
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen Dairenin Yarı Çapını Giriniz : ");
+        r = input.nextInt();
+        System.out.print("Lütfen Merkez Açısını Giriniz : ");
+        a = input.nextInt();
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+        double alan = pi * r * r ;
+        double cevre = 2 * pi * r;
+        double dairedilimi = ((alan * a) / 360);
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+        System.out.println("Dairenizin Alanı : " + alan);
+        System.out.println("Dairenizin Çevresi : " + cevre);
+        System.out.println("Dairenizin Dilimi Alanı : " + dairedilimi);
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+    }
+}
